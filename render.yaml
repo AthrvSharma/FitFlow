@@ -3,12 +3,10 @@ services:
     name: fitflow
     env: node
     plan: free
-    buildCommand: npm install && npm run build:client
-    startCommand: SERVE_FRONTEND=true npm run start:server
+    buildCommand: npm install --include=dev && npm run build:client
+    startCommand: NODE_ENV=production SERVE_FRONTEND=true npm run start:server
     healthCheckPath: /api/health
     envVars:
-      - key: NODE_ENV
-        value: production
       - key: SERVE_FRONTEND
         value: "true"
       - key: VITE_API_URL

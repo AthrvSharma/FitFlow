@@ -218,8 +218,8 @@ This gives one public URL for your whole app:
 - Push repo to GitHub.
 - In Render, create a new Web Service from this repo.
 - Render can use `render.yaml`, or set manually:
-  - Build command: `npm install && npm run build:client`
-  - Start command: `SERVE_FRONTEND=true npm run start:server`
+  - Build command: `npm install --include=dev && npm run build:client`
+  - Start command: `NODE_ENV=production SERVE_FRONTEND=true npm run start:server`
   - Health check path: `/api/health`
 
 #### 3. Set Render environment variables
