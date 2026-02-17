@@ -1,0 +1,23 @@
+{
+  "name": "WaterLog",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of hydration"
+    },
+    "amount_ml": {
+      "type": "number",
+      "description": "Amount of water in milliliters"
+    },
+    "time": {
+      "type": "string",
+      "description": "Time of consumption"
+    }
+  },
+  "required": [
+    "date",
+    "amount_ml"
+  ]
+}

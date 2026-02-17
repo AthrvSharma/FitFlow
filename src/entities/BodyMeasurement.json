@@ -1,0 +1,50 @@
+{
+  "name": "BodyMeasurement",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Measurement date"
+    },
+    "weight": {
+      "type": "number",
+      "description": "Weight in lbs"
+    },
+    "body_fat_percentage": {
+      "type": "number",
+      "description": "Body fat percentage"
+    },
+    "chest": {
+      "type": "number",
+      "description": "Chest measurement in inches"
+    },
+    "waist": {
+      "type": "number",
+      "description": "Waist measurement in inches"
+    },
+    "hips": {
+      "type": "number",
+      "description": "Hip measurement in inches"
+    },
+    "arms": {
+      "type": "number",
+      "description": "Arm measurement in inches"
+    },
+    "thighs": {
+      "type": "number",
+      "description": "Thigh measurement in inches"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Progress photo URL"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    }
+  },
+  "required": [
+    "date"
+  ]
+}

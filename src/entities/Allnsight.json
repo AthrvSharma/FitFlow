@@ -1,0 +1,57 @@
+{
+  "name": "AIInsight",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Insight date"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "workout",
+        "nutrition",
+        "recovery",
+        "motivation",
+        "recommendation"
+      ],
+      "description": "Insight type"
+    },
+    "title": {
+      "type": "string",
+      "description": "Insight title"
+    },
+    "message": {
+      "type": "string",
+      "description": "Insight message"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "Priority level"
+    },
+    "action_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Suggested actions"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether insight has been read"
+    }
+  },
+  "required": [
+    "date",
+    "type",
+    "title",
+    "message"
+  ]
+}

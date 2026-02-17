@@ -1,0 +1,41 @@
+{
+  "name": "SleepLog",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of sleep"
+    },
+    "bedtime": {
+      "type": "string",
+      "description": "Time went to bed"
+    },
+    "wake_time": {
+      "type": "string",
+      "description": "Time woke up"
+    },
+    "duration_hours": {
+      "type": "number",
+      "description": "Total hours of sleep"
+    },
+    "quality": {
+      "type": "string",
+      "enum": [
+        "poor",
+        "fair",
+        "good",
+        "excellent"
+      ],
+      "description": "Sleep quality rating"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    }
+  },
+  "required": [
+    "date",
+    "duration_hours"
+  ]
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: fitflow
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build:client
+    startCommand: SERVE_FRONTEND=true npm run start:server
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SERVE_FRONTEND
+        value: "true"
+      - key: VITE_API_URL
+        value: /api
+      - key: CLIENT_ORIGIN_REGEX
+        value: '^https://.*\.onrender\.com$'

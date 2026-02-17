@@ -1,0 +1,57 @@
+{
+  "name": "RecoveryScore",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of score"
+    },
+    "overall_score": {
+      "type": "number",
+      "description": "Overall recovery score (0-100)"
+    },
+    "sleep_score": {
+      "type": "number",
+      "description": "Sleep quality contribution"
+    },
+    "nutrition_score": {
+      "type": "number",
+      "description": "Nutrition adherence contribution"
+    },
+    "workout_load_score": {
+      "type": "number",
+      "description": "Training load assessment"
+    },
+    "readiness": {
+      "type": "string",
+      "enum": [
+        "ready",
+        "moderate",
+        "rest"
+      ],
+      "description": "Training readiness level"
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Recovery recommendations"
+    },
+    "suggested_workout_intensity": {
+      "type": "string",
+      "enum": [
+        "high",
+        "moderate",
+        "low",
+        "active_recovery"
+      ],
+      "description": "Recommended intensity"
+    }
+  },
+  "required": [
+    "date",
+    "overall_score"
+  ]
+}

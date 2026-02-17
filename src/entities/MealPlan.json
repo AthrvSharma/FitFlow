@@ -1,0 +1,76 @@
+{
+  "name": "MealPlan",
+  "type": "object",
+  "properties": {
+    "week_start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Week starting date"
+    },
+    "meals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "string"
+          },
+          "meal_type": {
+            "type": "string"
+          },
+          "recipe_name": {
+            "type": "string"
+          },
+          "ingredients": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "prep_time": {
+            "type": "number"
+          },
+          "calories": {
+            "type": "number"
+          },
+          "protein": {
+            "type": "number"
+          },
+          "carbs": {
+            "type": "number"
+          },
+          "fat": {
+            "type": "number"
+          }
+        }
+      },
+      "description": "Weekly meal plan"
+    },
+    "grocery_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "string"
+          },
+          "purchased": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "description": "Shopping list"
+    },
+    "total_cost_estimate": {
+      "type": "number",
+      "description": "Estimated weekly cost"
+    }
+  },
+  "required": [
+    "week_start_date"
+  ]
+}

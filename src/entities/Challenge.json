@@ -1,0 +1,80 @@
+{
+  "name": "Challenge",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Challenge title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Challenge description"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "workouts",
+        "steps",
+        "calories_burned",
+        "streak",
+        "custom"
+      ],
+      "description": "Challenge type"
+    },
+    "target": {
+      "type": "number",
+      "description": "Target to achieve"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Challenge start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Challenge end date"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "user_email": {
+            "type": "string"
+          },
+          "user_name": {
+            "type": "string"
+          },
+          "progress": {
+            "type": "number"
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        }
+      },
+      "description": "Challenge participants"
+    },
+    "creator_email": {
+      "type": "string",
+      "description": "Who created the challenge"
+    },
+    "is_community": {
+      "type": "boolean",
+      "default": false,
+      "description": "Open to all users"
+    },
+    "prize": {
+      "type": "string",
+      "description": "Challenge reward"
+    }
+  },
+  "required": [
+    "title",
+    "type",
+    "target",
+    "start_date",
+    "end_date"
+  ]
+}

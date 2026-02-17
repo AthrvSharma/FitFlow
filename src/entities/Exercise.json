@@ -1,0 +1,70 @@
+{
+  "name": "Exercise",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Exercise name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Exercise description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "strength",
+        "cardio",
+        "flexibility",
+        "core",
+        "plyometric"
+      ],
+      "description": "Exercise category"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Difficulty level"
+    },
+    "muscle_groups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Target muscle groups"
+    },
+    "equipment_needed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Required equipment"
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Step by step instructions"
+    },
+    "form_cues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Form and technique cues"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "Demo video URL"
+    }
+  },
+  "required": [
+    "name",
+    "category"
+  ]
+}

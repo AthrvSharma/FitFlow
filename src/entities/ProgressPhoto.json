@@ -1,0 +1,55 @@
+{
+  "name": "ProgressPhoto",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Photo date"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Photo URL"
+    },
+    "weight": {
+      "type": "number",
+      "description": "Weight at time of photo"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Progress notes"
+    },
+    "ai_analysis": {
+      "type": "object",
+      "properties": {
+        "body_fat_estimate": {
+          "type": "number"
+        },
+        "muscle_gain_assessment": {
+          "type": "string"
+        },
+        "recommendations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "AI-generated analysis"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "private",
+        "buddies",
+        "public"
+      ],
+      "default": "private",
+      "description": "Photo visibility"
+    }
+  },
+  "required": [
+    "date",
+    "photo_url"
+  ]
+}

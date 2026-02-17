@@ -1,0 +1,43 @@
+{
+  "name": "WorkoutBuddy",
+  "type": "object",
+  "properties": {
+    "buddy_email": {
+      "type": "string",
+      "description": "Email of workout buddy"
+    },
+    "buddy_name": {
+      "type": "string",
+      "description": "Name of workout buddy"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "active",
+        "inactive"
+      ],
+      "default": "pending",
+      "description": "Connection status"
+    },
+    "shared_goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Shared fitness goals"
+    },
+    "weekly_checkins": {
+      "type": "number",
+      "description": "Number of weekly check-ins",
+      "default": 0
+    },
+    "motivation_message": {
+      "type": "string",
+      "description": "Latest motivation message"
+    }
+  },
+  "required": [
+    "buddy_email"
+  ]
+}
